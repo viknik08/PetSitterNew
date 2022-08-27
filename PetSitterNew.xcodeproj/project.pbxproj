@@ -52,13 +52,85 @@
 		BEEBF36928B9BE2000B9D46D /* PetSitterNew */ = {
 			isa = PBXGroup;
 			children = (
-				BEEBF36A28B9BE2000B9D46D /* AppDelegate.swift */,
-				BEEBF36C28B9BE2000B9D46D /* SceneDelegate.swift */,
-				BEEBF36E28B9BE2000B9D46D /* ViewController.swift */,
-				BEEBF37328B9BE2500B9D46D /* Assets.xcassets */,
+				BEEBF37F28B9C08500B9D46D /* Sources */,
+				BEEBF37E28B9C04400B9D46D /* Resources */,
 				BEEBF37828B9BE2500B9D46D /* Info.plist */,
 			);
 			path = PetSitterNew;
+			sourceTree = "<group>";
+		};
+		BEEBF37E28B9C04400B9D46D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEEBF38228B9C0A700B9D46D /* APP */,
+				BEEBF38128B9C09E00B9D46D /* Controllers */,
+				BEEBF38328B9C0B000B9D46D /* Network */,
+				BEEBF38428B9C0BB00B9D46D /* DataBase */,
+				BEEBF38028B9C09400B9D46D /* Model */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BEEBF37F28B9C08500B9D46D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BEEBF37328B9BE2500B9D46D /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BEEBF38028B9C09400B9D46D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEEBF38128B9C09E00B9D46D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEEBF38628B9C0F600B9D46D /* Extensions */,
+				BEEBF38528B9C0EC00B9D46D /* Cell */,
+				BEEBF36E28B9BE2000B9D46D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEEBF38228B9C0A700B9D46D /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				BEEBF36A28B9BE2000B9D46D /* AppDelegate.swift */,
+				BEEBF36C28B9BE2000B9D46D /* SceneDelegate.swift */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		BEEBF38328B9C0B000B9D46D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BEEBF38428B9C0BB00B9D46D /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		BEEBF38528B9C0EC00B9D46D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BEEBF38628B9C0F600B9D46D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
