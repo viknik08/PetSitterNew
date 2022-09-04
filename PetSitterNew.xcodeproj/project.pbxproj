@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE79D0D528C47A4E0049636A /* ChoicePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79D0D428C47A4E0049636A /* ChoicePetViewController.swift */; };
+		BE79D0D928C47A820049636A /* SingInSitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79D0D828C47A820049636A /* SingInSitterViewController.swift */; };
 		BEEBF36B28B9BE2000B9D46D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF36A28B9BE2000B9D46D /* AppDelegate.swift */; };
 		BEEBF36D28B9BE2000B9D46D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF36C28B9BE2000B9D46D /* SceneDelegate.swift */; };
-		BEEBF36F28B9BE2000B9D46D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF36E28B9BE2000B9D46D /* ViewController.swift */; };
+		BEEBF36F28B9BE2000B9D46D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF36E28B9BE2000B9D46D /* StartViewController.swift */; };
 		BEEBF37428B9BE2500B9D46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEBF37328B9BE2500B9D46D /* Assets.xcassets */; };
 		BEEBF38928B9D41B00B9D46D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BEEBF38828B9D41B00B9D46D /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE79D0D428C47A4E0049636A /* ChoicePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePetViewController.swift; sourceTree = "<group>"; };
+		BE79D0D828C47A820049636A /* SingInSitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInSitterViewController.swift; sourceTree = "<group>"; };
 		BEEBF36728B9BE2000B9D46D /* PetSitterNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetSitterNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEBF36A28B9BE2000B9D46D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEEBF36C28B9BE2000B9D46D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BEEBF36E28B9BE2000B9D46D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEEBF36E28B9BE2000B9D46D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BEEBF37328B9BE2500B9D46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEEBF37828B9BE2500B9D46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE79D0D328C4743B0049636A /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				BEEBF38528B9C0EC00B9D46D /* Cell */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		BE79D0D628C47A520049636A /* FindSitter */ = {
+			isa = PBXGroup;
+			children = (
+				BE79D0D428C47A4E0049636A /* ChoicePetViewController.swift */,
+			);
+			path = FindSitter;
+			sourceTree = "<group>";
+		};
+		BE79D0D728C47A5C0049636A /* BecomeSitter */ = {
+			isa = PBXGroup;
+			children = (
+				BE79D0D828C47A820049636A /* SingInSitterViewController.swift */,
+			);
+			path = BecomeSitter;
+			sourceTree = "<group>";
+		};
 		BEEBF35E28B9BE2000B9D46D = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +102,10 @@
 			children = (
 				BEEBF38228B9C0A700B9D46D /* APP */,
 				BEEBF38128B9C09E00B9D46D /* Controllers */,
-				BEEBF38028B9C09400B9D46D /* Model */,
 				BEEBF38428B9C0BB00B9D46D /* DataBase */,
+				BEEBF38028B9C09400B9D46D /* Model */,
 				BEEBF38328B9C0B000B9D46D /* Network */,
+				BEEBF38628B9C0F600B9D46D /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -91,9 +120,10 @@
 		BEEBF38128B9C09E00B9D46D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEEBF38628B9C0F600B9D46D /* Extensions */,
-				BEEBF38528B9C0EC00B9D46D /* Cell */,
-				BEEBF36E28B9BE2000B9D46D /* ViewController.swift */,
+				BE79D0D728C47A5C0049636A /* BecomeSitter */,
+				BE79D0D628C47A520049636A /* FindSitter */,
+				BE79D0D328C4743B0049636A /* TableViews */,
+				BEEBF36E28B9BE2000B9D46D /* StartViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,7 +155,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Cell;
+			name = Cell;
+			path = ../Cell;
 			sourceTree = "<group>";
 		};
 		BEEBF38628B9C0F600B9D46D /* Extensions */ = {
@@ -210,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEEBF36F28B9BE2000B9D46D /* ViewController.swift in Sources */,
+				BEEBF36F28B9BE2000B9D46D /* StartViewController.swift in Sources */,
+				BE79D0D528C47A4E0049636A /* ChoicePetViewController.swift in Sources */,
+				BE79D0D928C47A820049636A /* SingInSitterViewController.swift in Sources */,
 				BEEBF36B28B9BE2000B9D46D /* AppDelegate.swift in Sources */,
 				BEEBF36D28B9BE2000B9D46D /* SceneDelegate.swift in Sources */,
 			);
