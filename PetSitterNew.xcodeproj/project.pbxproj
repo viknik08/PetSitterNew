@@ -35,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE79D0D328C4743B0049636A /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				BEEBF38528B9C0EC00B9D46D /* Cell */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
 		BEEBF35E28B9BE2000B9D46D = {
 			isa = PBXGroup;
 			children = (
@@ -91,8 +99,8 @@
 		BEEBF38128B9C09E00B9D46D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE79D0D328C4743B0049636A /* TableViews */,
 				BEEBF38628B9C0F600B9D46D /* Extensions */,
-				BEEBF38528B9C0EC00B9D46D /* Cell */,
 				BEEBF36E28B9BE2000B9D46D /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -125,7 +133,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Cell;
+			name = Cell;
+			path = ../Cell;
 			sourceTree = "<group>";
 		};
 		BEEBF38628B9C0F600B9D46D /* Extensions */ = {
