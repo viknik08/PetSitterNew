@@ -18,6 +18,7 @@ class ChoicePetViewController: UIViewController {
         button.backgroundColor = .systemCyan
         button.layer.cornerRadius = 10
         button.tintColor = .white
+        button.alpha = 0
         button.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
         return button
     }()
@@ -27,6 +28,7 @@ class ChoicePetViewController: UIViewController {
         button.backgroundColor = .black
         button.layer.cornerRadius = 10
         button.tintColor = .white
+        button.alpha = 0
         button.addTarget(self, action: #selector(previousAction), for: .touchUpInside)
         return button
     }()
@@ -38,7 +40,19 @@ class ChoicePetViewController: UIViewController {
         view.backgroundColor = .systemRed
         setupHierarhy()
         setupLayout()
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveLinear) {
+            self.nextButton.alpha = 1
+            self.previousButton.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+
 
 //    MARK: - Setups
 
@@ -46,7 +60,7 @@ class ChoicePetViewController: UIViewController {
         view.addSubview(nextButton)
         view.addSubview(previousButton)
     }
-    
+
     private func setupLayout() {
         nextButton.snp.makeConstraints { make in
             make.centerX.equalTo(view)

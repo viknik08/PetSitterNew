@@ -17,6 +17,7 @@ class StartViewController: UIViewController {
         button.backgroundColor = .systemCyan
         button.layer.cornerRadius = 10
         button.tintColor = .white
+        button.alpha = 0
         button.addTarget(self, action: #selector(findSitterAction), for: .touchUpInside)
         return button
     }()
@@ -26,6 +27,7 @@ class StartViewController: UIViewController {
         button.backgroundColor = .black
         button.layer.cornerRadius = 10
         button.tintColor = .white
+        button.alpha = 0
         button.addTarget(self, action: #selector(becomeSitterAction), for: .touchUpInside)
         return button
     }()
@@ -37,6 +39,15 @@ class StartViewController: UIViewController {
         view.backgroundColor = .white
         setupHierarhy()
         setupLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.8, delay: 0, options: .curveEaseIn) {
+            self.findSitterButton.alpha = 1
+            self.becomeSitterButton.alpha = 1
+            self.view.layoutIfNeeded()
+        }
     }
 
 //    MARK: - Setups

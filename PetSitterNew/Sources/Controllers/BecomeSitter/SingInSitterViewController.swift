@@ -17,6 +17,7 @@ class SingInSitterViewController: UIViewController {
         button.backgroundColor = .systemCyan
         button.layer.cornerRadius = 10
         button.tintColor = .white
+        button.alpha = 0
         button.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
         return button
     }()
@@ -26,6 +27,7 @@ class SingInSitterViewController: UIViewController {
         button.backgroundColor = .black
         button.layer.cornerRadius = 10
         button.tintColor = .white
+        button.alpha = 0
         button.addTarget(self, action: #selector(previousAction), for: .touchUpInside)
         return button
     }()
@@ -37,6 +39,15 @@ class SingInSitterViewController: UIViewController {
         view.backgroundColor = .systemGray
         setupHierarhy()
         setupLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveLinear) {
+            self.nextButton.alpha = 1
+            self.previousButton.alpha = 1
+            self.view.layoutIfNeeded()
+        }
     }
 
 //    MARK: - Setups
