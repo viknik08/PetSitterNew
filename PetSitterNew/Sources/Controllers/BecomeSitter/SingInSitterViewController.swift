@@ -17,7 +17,6 @@ class SingInSitterViewController: UIViewController {
         button.backgroundColor = .systemCyan
         button.layer.cornerRadius = 10
         button.tintColor = .white
-        button.alpha = 0
         button.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
         return button
     }()
@@ -27,9 +26,75 @@ class SingInSitterViewController: UIViewController {
         button.backgroundColor = .black
         button.layer.cornerRadius = 10
         button.tintColor = .white
-        button.alpha = 0
         button.addTarget(self, action: #selector(previousAction), for: .touchUpInside)
         return button
+    }()
+    private let stackForTextField: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.distribution = .fill
+        stack.spacing = 30
+        return stack
+    }()
+    private let stackForButton: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .fillEqually
+        stack.spacing = 20
+        return stack
+    }()
+    private let mainStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.distribution = .fillProportionally
+        stack.spacing = 20
+        stack.alpha = 0
+        return stack
+    }()
+    private let firstNameTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter you name"
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        textField.textColor = .black
+        return textField
+    }()
+    private let secondNameTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter you second name"
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        return textField
+    }()
+    private let phoneNumberTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter you phone number"
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        return textField
+    }()
+    private let emailTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter you email"
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        return textField
+    }()
+    private let passwordTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter you password"
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        textField.isSecureTextEntry = true
+        return textField
+    }()
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Registration"
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        return label
     }()
 
 //    MARK: - LifeCycle
@@ -43,9 +108,8 @@ class SingInSitterViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.6, delay: 0, options: .curveLinear) {
-            self.nextButton.alpha = 1
-            self.previousButton.alpha = 1
+        UIView.animate(withDuration: 0.8, delay: 0, options: .curveLinear) {
+            self.mainStack.alpha = 1
             self.view.layoutIfNeeded()
         }
     }
@@ -53,21 +117,32 @@ class SingInSitterViewController: UIViewController {
 //    MARK: - Setups
 
     private func setupHierarhy() {
-        view.addSubview(nextButton)
-        view.addSubview(previousButton)
+        view.addSubview(mainStack)
+        mainStack.addArrangedSubviews([titleLabel, stackForTextField, stackForButton])
+        stackForTextField.addArrangedSubviews([firstNameTextField, secondNameTextField, phoneNumberTextField, emailTextField, passwordTextField])
+        stackForButton.addArrangedSubviews([previousButton, nextButton])
     }
     
     private func setupLayout() {
+        mainStack.snp.makeConstraints { make in
+            make.left.right.equalTo(view)
+            make.center.equalTo(view)
+        }
+        titleLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(mainStack)
+        }
+        stackForTextField.snp.makeConstraints { make in
+            make.right.equalTo(mainStack).inset(20)
+            make.left.equalTo(mainStack).offset(20)
+        }
+        stackForButton.snp.makeConstraints { make in
+            make.left.equalTo(mainStack).offset(20)
+            make.right.equalTo(mainStack).inset(20)
+        }
         nextButton.snp.makeConstraints { make in
-            make.centerX.equalTo(view)
-            make.centerY.equalTo(view).offset(-15)
-            make.width.equalTo(300)
             make.height.equalTo(40)
         }
         previousButton.snp.makeConstraints { make in
-            make.top.equalTo(nextButton.snp.bottom).offset(30)
-            make.centerX.equalTo(view)
-            make.width.equalTo(300)
             make.height.equalTo(40)
         }
     }
