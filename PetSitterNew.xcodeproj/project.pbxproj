@@ -10,6 +10,7 @@
 		BE79D0D528C47A4E0049636A /* ChoicePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79D0D428C47A4E0049636A /* ChoicePetViewController.swift */; };
 		BE79D0D928C47A820049636A /* SingInSitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79D0D828C47A820049636A /* SingInSitterViewController.swift */; };
 		BE79D0DB28C49FFC0049636A /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79D0DA28C49FFC0049636A /* Extension + UIView.swift */; };
+		BE79D0DD28C60BFB0049636A /* Extension + UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79D0DC28C60BFB0049636A /* Extension + UIStackView.swift */; };
 		BEEBF36B28B9BE2000B9D46D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF36A28B9BE2000B9D46D /* AppDelegate.swift */; };
 		BEEBF36D28B9BE2000B9D46D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF36C28B9BE2000B9D46D /* SceneDelegate.swift */; };
 		BEEBF36F28B9BE2000B9D46D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF36E28B9BE2000B9D46D /* StartViewController.swift */; };
@@ -21,6 +22,7 @@
 		BE79D0D428C47A4E0049636A /* ChoicePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePetViewController.swift; sourceTree = "<group>"; };
 		BE79D0D828C47A820049636A /* SingInSitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInSitterViewController.swift; sourceTree = "<group>"; };
 		BE79D0DA28C49FFC0049636A /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
+		BE79D0DC28C60BFB0049636A /* Extension + UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIStackView.swift"; sourceTree = "<group>"; };
 		BEEBF36728B9BE2000B9D46D /* PetSitterNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetSitterNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEBF36A28B9BE2000B9D46D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEEBF36C28B9BE2000B9D46D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				BE79D0DA28C49FFC0049636A /* Extension + UIView.swift */,
+				BE79D0DC28C60BFB0049636A /* Extension + UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				BE79D0D928C47A820049636A /* SingInSitterViewController.swift in Sources */,
 				BEEBF36B28B9BE2000B9D46D /* AppDelegate.swift in Sources */,
 				BEEBF36D28B9BE2000B9D46D /* SceneDelegate.swift in Sources */,
+				BE79D0DD28C60BFB0049636A /* Extension + UIStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
